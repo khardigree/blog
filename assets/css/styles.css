@@ -1,0 +1,28 @@
+body{
+    background: url(../css/stacked-steps-haikei.svg) no-repeat;
+}
+
+
+.blogHead {
+    /* background: url(../css/stacked-steps-haikei.svg) no-repeat; */
+    font-size: 50px;
+    height: 400px;
+    float: left;
+    width: 70%; 
+    text-align: center;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+aside {
+    justify-content: flex-end;
+    float: right;
+    width: 30%; 
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
