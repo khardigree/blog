@@ -1,28 +1,37 @@
-body{
-    background: url(../css/stacked-steps-haikei.svg) no-repeat;
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-
-.blogHead {
-    /* background: url(../css/stacked-steps-haikei.svg) no-repeat; */
-    font-size: 50px;
-    height: 400px;
-    float: left;
-    width: 70%; 
-    text-align: center;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: center;
+.left {
+  left: 0;
+  background: url(./stacked-steps-haikei.svg) no-repeat center center/cover
+    border-box;
 }
 
-aside {
-    justify-content: flex-end;
-    float: right;
-    width: 30%; 
+.right {
+  right: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+  order: 1;
+}
+
+form {
+  font-size: 25px;
 }
