@@ -15,8 +15,7 @@
   </head>
   <body>
     <nav class="navbar navbar-light">
-        <div class="container-fluid">
-            class="navbar-btn justify-content-end">
+        <div class="container-fluid navbar-btn justify-content-end">
                 <button class="toggle">Turn off the lights!</button>
             
         </div>
@@ -31,17 +30,17 @@
 
     <div class="split right">
         <div class="centered">
-            <form>
+            <form id="blogPost">
                 <p>Username</p>
-                <input type="text" name="username" placeholder="Who are you?" /> 
+                <input type="text" id="username" placeholder="Who are you?" /> 
                 <p>Title</p>
-                <input type="title" name="password" placeholder="Name it" /> 
+                <input type="title" id="title" placeholder="Name it" /> 
                 <p>Spill</p>
-                <textarea></textarea> 
+                <textarea class="post"></textarea> 
             </form>
-            <button class="submit">Send it</button>
+            <button id="submit">Send it</button>
         </div>
     </div>
-    </nav>
+  <script src="./assets/js/logic.js"></script>
   </body>
 </html>
