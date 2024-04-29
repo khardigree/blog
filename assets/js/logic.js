@@ -18,3 +18,21 @@ function getBlogPost(e) {
 
 submit.addEventListener("click", getBlogPost);
 
+// Get the existing blog posts from local storage
+let blogPosts = localStorage.getItem('blogPosts');
+if (!blogPosts) {
+    // If there are no existing blog posts, create an empty array
+    blogPosts = [];
+} else {
+    // If there are existing blog posts, parse the JSON string into an array
+    blogPosts = JSON.parse(blogPosts);
+}
+
+// Add the new blog post to the array
+blogPosts.push(blogPost);
+
+// Store the updated blog posts array back into local storage
+localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
+// Call the renderBlogPost function to update the page with the new blog post
+renderBlogPost();
