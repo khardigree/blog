@@ -10,7 +10,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
   />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Kaitlynn Hardigree | Blog</title>
 </head>
 <body>
@@ -18,16 +18,34 @@
         <div class="container-fluid">
           <a class="navbar-brand">Kaitlynn's Blog </a>
           <form class="d-flex">
-            <button class="back">&#8592; Back</button>
-            <button class="darkToggle">&#x2600</button>
+            <button id="back" class="btn btn-sm btn-info rounded-pill">&#8592; Back</button>
+            <button id="darkModeButton" class="btn btn-sm btn-warning rounded-pill">Turn off the lights!</button>
           </form>
         </div>
       </nav>
       <section id="post">
-        
+        <div class="container-md" id = "firstPost">
+          <h1>Username</h1>
+          <h2>Post Title</h2>
+          <p>Post Content</p>
+        </div>
+        <section id="post">
+        <div class="container-md" id="secondPost">
+            <h1>Username</h1>
+            <h2>Post Title</h2>
+            <p>Post Content</p>
+        </div>
+        <div class="container-md" id="thirdPost">
+          <h1>Username</h1>
+          <h2>Post Title</h2>
+          <p>Post Content</p>
+        </div>
     </section>
-<script src="./assets/js/blog.js"></script>
-
     
+<footer>
+  Portfolio: <a href="https://kaitlynnhardigree.github.io/portfolio/">Kaitlynn Hardigree</a>
+</footer>
+
+<script src="./assets/js/blog.js"></script>
 </body>
 </html>

@@ -35,3 +35,14 @@
 form {
   font-size: 25px;
 }
+
+.dark-mode{
+  background-color: #54237c;
+  color: white;
+}
+
+button{
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 15%;
+}
