@@ -2,6 +2,8 @@ let entry = document.getElementById("blogPost");
 let submit = document.getElementById("submit");
 
 
+const blogs = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
 function getBlogPost(e) {
     e.preventDefault();
     
@@ -22,7 +24,8 @@ function getBlogPost(e) {
     } else {
         alert("Thank you for sharing!");
     }
-    saveFormData(formData);
+    blogs.push(formData);
+    saveFormData(blogs);
     window.location.href = "blog.html";
     
 }
@@ -30,9 +33,6 @@ function getBlogPost(e) {
 submit.addEventListener("click", getBlogPost);
 
  
-
-
-
 function saveFormData(formData) {
     localStorage.setItem('blogPosts', JSON.stringify(formData));
 
@@ -40,5 +40,25 @@ function saveFormData(formData) {
 
 
 
+// function renderPosts() {
+
+//     let blogs = JSON.parse(localStorage.getItem('blogPosts')) || [];
+    
+
+//     for (let i = 0; i < blogs.length; i++) {
+//         let username = blogs[i].username;
+//         let title = blogs[i].title;
+//         let post = blogs[i].post;
+
+//         let div = document.createElement("div");
+//         div.innerHTML = `<h2>${username}</h2><h3>${title}</h3><p>${post}</p>`;
+//         postList.appendChild(div);
+//     }
+// }
+
+// window.onload = function() {
+//     postList = document.getElementById("postList");
+//     renderPosts();
+// };
 
 

@@ -1,47 +1,7 @@
 const storedFormData = JSON.parse(localStorage.getItem('blogPosts')) || [];
-const postContainer = document.getElementById("post");
+const postContainer = document.getElementById("postList");
 
 console.log(storedFormData);
-
-// Create a new form data object
-let newFormData = {
-    username: $("#username").val(),
-    title: $("#title").val(),
-    post: $("#post").val(),
-};
-
-const user = storedFormData.username;
-const title = storedFormData.title;
-const post = storedFormData.post;
-
-const blogPost ={
-    user, 
-    title, 
-    post,
-}
-
-postContainer.textContent = `User: ${blogPost.user}, Title: ${blogPost.title}, Post: ${blogPost.post}`;
-
-function saveFormData(formData) {
-    storedFormData.push(formData);
-    if (Array.isArray(storedFormData)) {
-        storedFormData.forEach(data => {
-            let newPost = document.createElement("div");
-            newPost.textContent = `User: ${data.username}, Title: ${data.title}, Post: ${data.post}`;
-            postContainer.appendChild(newPost);
-        });
-    }
-}
-
-
-
-// if (Array.isArray(storedFormData)) {
-//     storedFormData.forEach(data => {
-//         let newPost = document.createElement("div");
-//         newPost.textContent = `User: ${data.username}, Title: ${data.title}, Post: ${data.post}`;
-//         postContainer.appendChild(newPost);
-//     });
-// }
 
 
 //add eventListener for toggle
@@ -60,3 +20,25 @@ function goBack() {
     window.location.href = "index.html";
 }
 document.getElementById("back").addEventListener("click", goBack);
+
+function renderPosts() {
+
+    let blogs = JSON.parse(localStorage.getItem('blogPosts')) || [];
+    
+
+    for (let i = 0; i < blogs.length; i++) {
+        let username = blogs[i].username;
+        let title = blogs[i].title;
+        let post = blogs[i].post;
+
+        let div = document.createElement("div");
+        div.innerHTML = `<h2>${username}</h2><h3>${title}</h3><p>${post}</p>`;
+        postList.appendChild(div);
+    }
+}
+
+window.onload = function() {
+    postList = document.getElementById("postList");
+    renderPosts();
+};
+
