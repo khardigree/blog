@@ -53,3 +53,34 @@ button{
   border: #dc4eff solid 2px;
   border-radius: 15%;
 }
+
+@media (max-width: 768px) { 
+  .split { 
+    width: 100%; 
+    position: static; 
+    height: auto; 
+    padding-top: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  .left, .right { 
+    position: static; 
+    width: 100%; 
+    background: none; 
+  } 
+  .centered { 
+    position: static; 
+    transform: none; 
+    top: auto; 
+    left: auto; 
+    text-align: center; 
+  } 
+  .toggle { 
+    justify-content: flex-start; 
+    order: 0; 
+  } 
+  form { 
+    font-size: 20px; 
+  } 
+}
