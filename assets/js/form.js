@@ -37,28 +37,3 @@ function saveFormData(formData) {
     localStorage.setItem('blogPosts', JSON.stringify(formData));
 
 }
-
-
-
-// function renderPosts() {
-
-//     let blogs = JSON.parse(localStorage.getItem('blogPosts')) || [];
-    
-
-//     for (let i = 0; i < blogs.length; i++) {
-//         let username = blogs[i].username;
-//         let title = blogs[i].title;
-//         let post = blogs[i].post;
-
-//         let div = document.createElement("div");
-//         div.innerHTML = `<h2>${username}</h2><h3>${title}</h3><p>${post}</p>`;
-//         postList.appendChild(div);
-//     }
-// }
-
-// window.onload = function() {
-//     postList = document.getElementById("postList");
-//     renderPosts();
-// };
-
-

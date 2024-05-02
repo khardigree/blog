@@ -10,11 +10,11 @@ body{
 }
 
 .dark-mode{
-    background-color: #00388b;
+    background-color: #480069;
     color: white;
     
+    
 }
-
 
 .postList {
     color: black;
@@ -39,3 +39,12 @@ body{
     margin: 10px;
     padding: 10px;
   }
+
+.newPost div{
+    border:  #dc4eff 5px solid;
+}
+
+.newPost .dark-mode {
+    background-color: #dc4eff;
+    color: white;
+}

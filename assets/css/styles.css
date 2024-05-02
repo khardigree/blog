@@ -49,7 +49,7 @@ button{
 
 #submit{
   background-color: white;
-  color: #FF0E95;
-  border: 2px solid #FF0E95;
+  color: #dc4eff;
+  border: #dc4eff solid 2px;
   border-radius: 15%;
 }
