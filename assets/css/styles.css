@@ -46,3 +46,10 @@ button{
   padding: 10px;
   border-radius: 15%;
 }
+
+#submit{
+  background-color: white;
+  color: #FF0E95;
+  border: 2px solid #FF0E95;
+  border-radius: 15%;
+}
